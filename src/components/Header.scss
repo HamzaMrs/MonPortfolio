@@ -1,0 +1,130 @@
+/* --------- */
+/* Variables  */
+$primary-color: #be50f4;
+$secondary-color: #c95bf5;
+$navbar-bg-color: #1b1a2ea9;
+$font-size-mobile: 1.4rem;
+$font-size-desktop: 1.2rem;
+
+/* --------- */
+/* Header Section  */
+.header {
+    display: flex;
+    justify-content: space-between; /* Permet de placer h1 à gauche et nav à droite */
+    align-items: center;            /* Centre les éléments verticalement */
+    padding: 0 15px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    background-color: transparent; /* Fond transparent par défaut */
+    transition: all 0.3s ease-out;
+    z-index: 1000;
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Assure que h1 reste à gauche et nav à droite */
+        width: 100%;
+        margin: auto 30px;
+      }
+      
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Espacement entre les liens */
+        margin-left: auto; /* Pousse la nav à droite */
+        margin-right: 40px;
+        .fork-btn {
+            background-color: #934cce5e !important;
+            border-radius: 5px;
+            padding: 0.25rem 1.1rem !important;
+            transition: all 0.3s ease-in-out; /* Ajoute une transition fluide */
+          
+            &:hover {
+              background-color: #c95bf5 !important;
+              transform: translateY(-3px); /* Fait monter légèrement le bouton */
+            }
+          }
+          
+      }
+      
+  
+    &.sticky {
+        background-color: rgba(27, 26, 46, 0.6) !important; /* Légère transparence */
+        backdrop-filter: blur(10px); /* Effet de flou */
+      }
+  
+    nav {
+      display: flex;
+      align-items: center;
+      margin-left: auto; /* Cette ligne est cruciale pour pousser les nav à droite */
+      gap: 10px; /* Espacement entre les éléments dans la nav */
+  
+      a {
+        display: flex; /* Utiliser flexbox */
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        padding: 0.8rem 1rem;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease-out;
+  
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 5px;
+          width: 0;
+          border-radius: 16px;
+          background: $secondary-color;
+          bottom: 1px;
+          left: 0;
+          z-index: -1;
+          transition: all 0.3s ease-out;
+        }
+  
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+  /* Mobile Responsive */
+  @media (max-width: 767px) {
+    padding: 1rem 2rem;
+    font-size: $font-size-mobile;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        padding: 1rem;
+      }
+    }
+
+    .navbar-toggler {
+      display: block;
+      background-color: transparent;
+      border: none;
+
+      span {
+        display: block;
+        background-color: $primary-color;
+        height: 4px;
+        width: 27px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+}

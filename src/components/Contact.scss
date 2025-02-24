@@ -1,0 +1,71 @@
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(119, 53, 136, 0.3);
+  
+    h2 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 20px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 8px rgba(119, 53, 136, 0.2);
+  
+      input,
+      textarea {
+        font-family: "Raleway", serif !important;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        transition: 0.3s ease-in-out;
+  
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+        }
+  
+        &:focus {
+          outline: none;
+          background: rgba(255, 255, 255, 0.3);
+        }
+      }
+  
+      textarea {
+        resize: none;
+        height: 120px;
+      }
+  
+      button {
+        background: #623686;
+        border: none;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 2px 5px rgba(119, 53, 136, 0.3);
+  
+        &:hover {
+          background: #c95bf5;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(119, 53, 136, 0.5);
+        }
+      }
+    }
+  }
+  

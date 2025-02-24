@@ -1,0 +1,80 @@
+.skills {
+    text-align: center;
+    padding: 50px 0;
+}
+  
+.skills h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+  
+.skills__container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+  
+.skills__section {
+    background-color: transparent;
+    border: 2px solid #623686;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459);
+    color: white;
+    opacity: 0.9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+.skills__section h2 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 15px;
+    width: 100%;
+}
+  
+.skills__section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+  
+.skills__section li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    width: 48%;
+    transition: transform 0.3s ease, text-shadow 0.3s ease; 
+    &:hover {
+        transform: scale(1.1);
+        text-shadow: 0 0 15px rgba(129, 72, 144, 0.7); 
+    }
+}
+
+.skills__icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #623686;
+}
+  
+  
+.skill-level {
+    font-size: 9px;
+    color: #cd5ff8;
+    margin-top: 5px;
+}
+  
+/* Responsivité : Empile les éléments sur petits écrans */
+@media (max-width: 768px) {
+    .skills__section li {
+        width: 100%;
+    }
+}

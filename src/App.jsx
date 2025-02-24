@@ -1,35 +1,82 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Preload from "./components/Preload";
+import Starfield from 'react-starfield';
+import './styles/main.scss';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [load, updateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      updateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      const fadeTop = document.querySelector('.fade-effect-top');
+      const fadeBottom = document.querySelector('.fade-effect-bottom');
+
+      // Effet de fondu en haut
+      if (scrollPosition > 0) {
+        fadeTop.style.opacity = Math.min(scrollPosition / 100, 1);
+      } else {
+        fadeTop.style.opacity = 0;
+      }
+
+      // Effet de fondu en bas
+      if (scrollPosition < documentHeight - windowHeight) {
+        const bottomScrollPosition = documentHeight - windowHeight - scrollPosition;
+        fadeBottom.style.opacity = Math.min(bottomScrollPosition / 100, 1);
+      } else {
+        fadeBottom.style.opacity = 0;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Preload load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Starfield
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%"
+          }}
+          numParticles={800}
+          particleSpeed={0}
+          dx={0.000000001}
+          dy={0.000000001}
+        />
+        <div className="fade-effect-top"></div>
+        <div className="fade-effect-bottom"></div>
+        <Header />
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
