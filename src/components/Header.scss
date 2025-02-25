@@ -19,6 +19,7 @@ $font-size-desktop: 1.2rem;
     background-color: transparent; /* Fond transparent par défaut */
     transition: all 0.3s ease-out;
     z-index: 1000;
+    margin-bottom: 100px;
     .header-container {
         display: flex;
         align-items: center;

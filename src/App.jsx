@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preload from "./components/Preload";
 import Starfield from 'react-starfield';
+import ScrollBar from './effect/ScrollBar';
+import ScrollLinked from "./effect/ScrollLinked";
 import './styles/main.scss';
 
 function App() {
@@ -68,12 +70,15 @@ function App() {
         <div className="fade-effect-top"></div>
         <div className="fade-effect-bottom"></div>
         <Header />
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer />
+        <ScrollBar>
+        <ScrollLinked>
+            <Hero/>
+            <About/>
+            <Projects/>
+            <Skills/>
+            <Contact/>
+        </ScrollLinked>
+        </ScrollBar>
       </div>
     </>
   );

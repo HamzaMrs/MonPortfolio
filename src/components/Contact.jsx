@@ -47,23 +47,31 @@ function Contact() {
       <h2>Contact</h2>
       {success && <p className="success-msg">Message envoyé avec succès !</p>}
       <form onSubmit={handleSubmit}>
+        <label htmlFor="nom" className="visually-hidden">Nom</label>
         <input
           type="text"
+          id="nom"
           name="nom"
           placeholder="Nom"
           value={formData.nom}
           onChange={handleChange}
           required
         />
+  
+        <label htmlFor="email" className="visually-hidden">Email</label>
         <input
           type="email"
+          id="email"
           name="email"
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
           required
         />
+  
+        <label htmlFor="message" className="visually-hidden">Votre message</label>
         <textarea
+          id="message"
           name="message"
           placeholder="Votre message"
           value={formData.message}
@@ -74,6 +82,8 @@ function Contact() {
       </form>
     </section>
   );
+  
+  
 }
 
 export default Contact;

@@ -30,4 +30,9 @@ body {
     bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%);
   }
-  
+  .panel {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

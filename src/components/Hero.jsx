@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 function Hero() {
     return (
-        <section className="hero-section" id="home">
+        <section className="hero-section" id="home" >
           <Container fluid>
             <Row className="align-items-center">
               {/* Colonne pour le texte */}
