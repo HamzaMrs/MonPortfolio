@@ -9,8 +9,8 @@ import Footer from './components/Footer';
 import Preload from "./components/Preload";
 import Starfield from 'react-starfield';
 import ScrollBar from './effect/ScrollBar';
-import ScrollLinked from "./effect/ScrollLinked";
 import './styles/main.scss';
+
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -51,6 +51,21 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.6) { // 60% du Hero scrollé
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
     <>
@@ -71,13 +86,12 @@ function App() {
         <div className="fade-effect-bottom"></div>
         <Header />
         <ScrollBar>
-        <ScrollLinked>
             <Hero/>
             <About/>
             <Projects/>
             <Skills/>
             <Contact/>
-        </ScrollLinked>
+            <Footer/>
         </ScrollBar>
       </div>
     </>

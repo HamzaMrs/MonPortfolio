@@ -6,7 +6,7 @@ body {
   color: #f0f0f0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: black url('https://source.unsplash.com/1600x900/?stars,night') no-repeat center center;
+  background: rgb(0, 0, 0) url('https://source.unsplash.com/1600x900/?stars,night') no-repeat center center;
   background-size: cover;
 }
 
@@ -28,11 +28,5 @@ body {
   
   .fade-effect-bottom {
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%);
-  }
-  .panel {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, transparent 100%);
   }

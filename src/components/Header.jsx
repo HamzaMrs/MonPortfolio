@@ -6,6 +6,7 @@ import CV from '../assets/CV-DevWeb-2.jpeg';
 
 function Header() {
     const [navColour, updateNavbar] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         function scrollHandler() {
@@ -25,13 +26,22 @@ function Header() {
         });
     };
 
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+
     return (
         <header className={navColour ? 'header sticky' : 'header'}>
             <div className="header-container">
                 <h1 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{ cursor: "pointer" }}>
-                Mon Portfolio
+                    Mon Portfolio
                 </h1>
-                <nav className="nav-links">
+
+                <div className="hamburger" onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
                     <a href="#about" onClick={(e) => scrollToSection(e, "about")}>
                         <AiOutlineUser /> À propos
                     </a>

@@ -4,7 +4,7 @@ import './Skills.scss';
 function Skills() {
   return (
 <section class="skills" id='skills'>
-  <h1>Mes <strong style={{ color: "#cd5ff8" }}>Compétences</strong></h1>
+  <h1>Mes <strong style={{ color: "#5feef8" }}>Compétences</strong></h1>
   <div class="skills__container">
     <div class="skills__section">
       <h2>Langages de programmation</h2>

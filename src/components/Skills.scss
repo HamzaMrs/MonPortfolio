@@ -17,12 +17,11 @@
   
 .skills__section {
     background-color: transparent;
-    border: 2px solid #623686;
     border-radius: 10px;
     padding: 20px;
     width: 500px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459);
+    box-shadow: 0 0 20px 11px #116066 !important;
     color: white;
     opacity: 0.9;
     display: flex;
@@ -55,20 +54,20 @@
     transition: transform 0.3s ease, text-shadow 0.3s ease; 
     &:hover {
         transform: scale(1.4);
-        text-shadow: 0 0 15px rgba(129, 72, 144, 0.7); 
+        text-shadow: 0 0 15px #5feef8; 
     }
 }
 
 .skills__icon {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #623686;
+    color: #116066;
 }
   
   
 .skill-level {
     font-size: 9px;
-    color: #cd5ff8;
+    color: #5feef8;
     margin-top: 5px;
 }
   

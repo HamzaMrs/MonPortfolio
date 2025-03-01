@@ -33,7 +33,7 @@
         margin: 0 auto;
         font-size: 1.2rem;
         line-height: 1.6;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(24, 127, 206, 0.15);
         padding: 20px;
         border-radius: 10px;
         backdrop-filter: blur(10px);
@@ -46,7 +46,7 @@
 
     .about-content:hover {
         transform: scale(1.03);
-        box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 0px 20px 0px #5feef8;
     }
 }
 
