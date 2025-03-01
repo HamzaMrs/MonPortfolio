@@ -20,6 +20,13 @@ function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById("about"); // Remplace "next-section" par l'ID de la section cible
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className={`hero-section ${scrolled ? "scrolled" : ""}`} id="home">
       <Container fluid>
@@ -27,7 +34,7 @@ function Hero() {
           {/* Colonne pour le texte */}
           <Col md={7} className="hero-text">
             <h1 className="hero-heading">
-              Salut !
+              SALUT !
             </h1>
             <h1 className="hero-name">
               JE SUIS <strong className="highlighted-name">MARS HAMZA</strong>
@@ -46,9 +53,7 @@ function Hero() {
           </Col>
         </Row>
       </Container>
-
-      {/* Flèche animée */}
-      <div className="scroll-down">
+      <div className="scroll-down" onClick={scrollToNextSection}>
         <FaChevronDown />
       </div>
     </section>

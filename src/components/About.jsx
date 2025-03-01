@@ -14,7 +14,7 @@ function About() {
                 </p>
                 <p>
                     Grâce à ce parcours, j’ai acquis une solide base en programmation avec divers langages tels que Python, 
-                    HTML, C, Java et autres, ainsi qu’une bonne compréhension des principes du développement logiciel. Aujourd’hui, 
+                    HTML-CSS, C, Java, JavaScript et autres, ainsi qu’une bonne compréhension des principes du développement logiciel. Aujourd’hui, 
                     je me consacre pleinement au développement web et affine mes compétences en front-end et back-end 
                     à travers mes projets.
                 </p>
