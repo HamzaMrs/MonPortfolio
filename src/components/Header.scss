@@ -95,69 +95,71 @@ $font-size-desktop: 1.2rem;
 
     /* Mobile Responsive */
     @media (max-width: 767px) {
-        padding: 1rem 2rem;
-        font-size: $font-size-mobile;
-
+        .header {
+            padding: 1rem;
+            font-size: $font-size-mobile;
+        }
+    
         .nav-links {
-            display: none; /* Cache le menu de navigation par défaut en mobile */
+            display: none; // Caché par défaut
             flex-direction: column;
             align-items: center;
             width: 100%;
             position: absolute;
             top: 100%;
-            left: 0;
-            background-color: $navbar-bg-color;
-            padding: 1rem 0;
-            gap: 1rem;
-            transition: all 0.3s ease-out;
-
-            a {
-                padding: 1rem;
-                width: 100%;
-                text-align: center;
-            }
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(27, 26, 46, 0.3); // Rend le fond semi-transparent
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            gap: 1.2rem;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); // Sépare visuellement du reste
         }
-
+    
         .nav-links.open {
-            display: flex; /* Affiche le menu lorsque la classe 'open' est ajoutée */
-            align-items: flex-start;
+            display: flex;
         }
-
-        /* Bouton Hamburger */
+    
         .hamburger {
-            display: block;
-            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
             border: none;
             cursor: pointer;
-
+            width: 40px;
+            height: 40px;
+            z-index: 1100;
+            
             span {
                 display: block;
                 background-color: #5feef8;
                 height: 4px;
-                width: 27px;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                transition: all 0.3s ease-out;
+                width: 30px;
+                margin: 4px 0;
+                border-radius: 2px;
+                transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
             }
-
-            &.open span:nth-child(1) {
-              transform: rotate(45deg);
-              position: absolute;
+    
+            &.open {
+                span:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+                span:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
             }
-          
-            &.open span:nth-child(2) {
-              opacity: 0; /* La barre du milieu disparaît */
-            }
-          
-            &.open span:nth-child(3) {
-              transform: rotate(-45deg);
-              position: absolute;
-            }
-          
+    
             &:focus,
             &:active {
-              outline: none;
+                outline: none;
             }
         }
     }
+    
 }

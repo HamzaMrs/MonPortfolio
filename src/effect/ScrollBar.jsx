@@ -16,7 +16,7 @@ export default function ScrollBar({ children }) {
         // Fonction qui ajuste la position du `top` en fonction de la taille de l'écran
         const handleResize = () => {
             if (window.innerWidth <= 768) {
-                setTopPosition(130); // Si l'écran est plus petit ou égal à 768px, on définit top à 130px
+                setTopPosition(70); // Si l'écran est plus petit ou égal à 768px, on définit top à 130px
             } else {
                 setTopPosition(80); // Par défaut, top à 80px pour les écrans plus grands
             }
