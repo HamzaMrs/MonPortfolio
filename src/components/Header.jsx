@@ -24,6 +24,7 @@ function Header() {
             behavior: "smooth",
             block: "start"
         });
+        setMenuOpen(false);
     };
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
