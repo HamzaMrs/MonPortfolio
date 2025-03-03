@@ -29,13 +29,13 @@ function Header() {
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
-        <header className={navColour ? 'header sticky' : 'header'}>
+        <header className={`header ${navColour || menuOpen ? 'sticky' : ''}`}>
             <div className="header-container">
                 <h1 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{ cursor: "pointer" }}>
                     Mon Portfolio
                 </h1>
 
-                <div className="hamburger" onClick={toggleMenu}>
+                <div className={menuOpen ? 'hamburger open' : 'hamburger'} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
