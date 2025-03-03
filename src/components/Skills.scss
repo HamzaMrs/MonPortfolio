@@ -72,7 +72,15 @@
 }
   
 /* Responsivité : Empile les éléments sur petits écrans */
+@media (max-width: 930px) {
+    .skills__section{
+        margin-bottom: 40px;
+    }
+}
 @media (max-width: 768px) {
+    .skills__section{
+        max-width: 300px;
+    }
     .skills__section li {
         width: 100%;
     }

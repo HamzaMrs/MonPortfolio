@@ -11,7 +11,7 @@ function Projects() {
     <Container fluid className="project-section" id="projects">
       <Container>
         <h1 className="project-heading">
-          Mes <strong style={{ color: "#5feef" }}>Projets récents</strong>
+          Mes <strong style={{ color: "#5feeef" }}>Projets récents</strong>
         </h1>
         <p style={{ color: "white" }}>
         Voici un aperçu de quelques-uns de mes derniers projets réalisés.

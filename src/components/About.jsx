@@ -4,7 +4,7 @@ import "./About.scss";
 function About() {
     return (
         <section id="about" className="about">
-            <h2>À propos de moi</h2>
+            <h2>À propos de <strong style={{ color: "#5feeef" }}>moi</strong></h2>
             <div className="about-content">
                 <p>
                     Passionné par le développement web, je suis actuellement en formation pour approfondir mes compétences 
