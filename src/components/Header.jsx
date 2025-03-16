@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Header.scss';
 import { AiOutlineSetting, AiOutlineUser, AiOutlineFundProjectionScreen, AiFillStar } from 'react-icons/ai';
 import { CgFileDocument, CgGitFork } from 'react-icons/cg';
-import CV from '../assets/CV-DevWeb-2.jpeg';
+import CV from '../assets/CV-DevWeb-2.jpg';
 
 function Header() {
     const [navColour, updateNavbar] = useState(false);
