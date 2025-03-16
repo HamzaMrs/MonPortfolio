@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preload from "./components/Preload";
 import Starfield from 'react-starfield';
-import ScrollBar from './effect/ScrollBar';
+import ScrollBar from './components/ScrollBar';
 import './styles/main.scss';
 
 
